@@ -2,11 +2,15 @@ package main
 
 import "testing"
 
-func TestAddistion (t*testing.T){
-	result:=add(1,1)
-	expected:=2
+func TestAddistion(t *testing.T) {
+	result := add(1, 1)
+	expected := 2
 	if result != expected {
 		t.Errorf("Expected %d, but got %d", expected, result)
 	}
 
+}
+
+func add(i1, i2 int) any {
+	panic("unimplemented")
 }
