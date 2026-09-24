@@ -13,7 +13,7 @@ jobs:
        uses:  actions/checkout@v4
      - name: Validating repository
        run: |
-            REQUIRED_DIRS=("mobile_app" "backend" "infrastructure")
+            REQUIRED_DIRS=("mobileApp" "backend" "infrastructure")
             MISSING=0
             for dir in "${REQUIRED_DIRS[@]}"; do
             if [ ! -d "$dir" ]; then
