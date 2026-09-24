@@ -1,0 +1,13 @@
+name:  'Repo Validation to main'
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  repo-validation:
+    runs_on:  ubuntu-lastest
+    steps:
+     - name:  Download repository code
+       uses:  actions/checkout@v4
