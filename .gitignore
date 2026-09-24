@@ -1,2 +1,32 @@
-.dart_tool
+# Operating System & IDE Junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Environment Variables & Local Secrets
+*.env
+*.env.local
+
+# Flutter / Dart (mobile_app/)
+.dart_tool/
+.pub-cache/
+.pub/
+build/
+*.apk
+*.app
+*.ipa
+
+# Go (backend/)
+# Executables & Binaries
+*.exe
+*.exe?
+*.dll
+*.so
+*.dylib
+bin/
 vendor/
+
+# Infrastructure / Docker
+*.log

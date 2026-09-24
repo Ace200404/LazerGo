@@ -1,0 +1,27 @@
+name:  'Repo Validation to main'
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  repo-validation:
+    runs-on:  ubuntu-latest
+    steps:
+     - name:  Download repository code
+       uses:  actions/checkout@v4
+     - name: Validating repository
+       run: |
+            REQUIRED_DIRS=("mobileApp" "backend" "infrastructure")
+            MISSING=0
+            for dir in "${REQUIRED_DIRS[@]}"; do
+            if [ ! -d "$dir" ]; then
+              echo "::error::Missing required directory: $dir"
+              MISSING=1
+            fi
+            done
+            if [ $MISSING -ne 0 ]; then
+            exit 1
+            fi
+            echo "All required top-level directories present."
