@@ -8,5 +8,4 @@ func TestAddistion(t *testing.T) {
 	if result != expected {
 		t.Errorf("Expected %d, but got %d", expected, result)
 	}
-
 }
