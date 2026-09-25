@@ -2,10 +2,15 @@ package main
 
 import "testing"
 
-func TestSanity(t *testing.T) {
-	result := 1 + 1
-	expected := 2
-	if result != expected {
-		t.Errorf("Sanity check failed: got %d, want %d", result, expected)
+func TestHealthCheck(t *testing.T) {
+	status := HealthCheck()
+	expected := "OK"
+
+	if status != expected {
+		t.Errorf("HealthCheck() = %s; want %s", status, expected)
 	}
+}
+
+func TestMainFunction(t *testing.T) {
+	main()
 }
